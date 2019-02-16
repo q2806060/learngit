@@ -1,0 +1,32 @@
+1.创建文本并保存及删除文件
+    1.vi [文本名称]/touch [文件名称] -- 创建并打开/创建
+    2.exc 后 :wq   -- 保存退出
+    3.cat [文件名] -- 查看文本内容
+    4.rm [文件名称] -- 删除文件
+2.保存并提交到git
+    1.git add 文本名称  -- 添加文本到git
+    2.git commit -m 字符串  -- 添加注释，并将本次修改提交到git
+3.返回之前的修改版本
+    1.git reset --hard HEAD^  -- 返回上个版本
+    2.~ HEAD^^...  -- 根据^的个数返回版本
+    3.~ HEAD~100  -- 返回前100个版本
+    4.~ 版本号  -- 用于返回固定版本
+4.历史版本记录及操作记录
+    1.git log   -- 当前版本及之前的版本
+    2.git reflog  -- 之前的所有操作信息
+5.查看工作区和版本库最新版本的区别  
+    git diff HEAD -- 文件名称
+6.撤销工作区的全部修改
+    git checkout -- 文件名称
+    注：还可以用于使用版本库中的版本替换工作区的版本，无论工作区的是修改了还是删除了，都可以"一键还原".
+7.撤销暂存区的修改
+    git reset HEAD 文件名称
+8.在GitHub上创建SSH Key
+    1.在本地git上创建.ssh目录
+        ssh-keygen -t rsa -C "myEmailaddress"
+    2.在GitHub内添加SSH KEY，并创建仓库 - create repository
+    3.同步本地Git仓库
+        git remote add origin git@github.com:q2806060/learngit.git
+    4.把本地库的所有内容推送到远程库上
+        git push -u origin master
+
