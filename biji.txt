@@ -8,6 +8,7 @@ linux系统安装  sudo apt-get install git
     1.git add 文本名称 / *  -- 添加文本 / 全部文件到git
     2.git rm --cached 文件名  -- 取消文件暂存
     3.git commit -m 字符串  -- 添加注释，并将本次修改提交到git
+    4.git status  -- 查看点前文件状态
 3.返回之前的修改版本
     1.git reset --hard HEAD^  -- 返回上个版本
     2.~ HEAD^^...  -- 根据^的个数返回版本
@@ -51,10 +52,20 @@ linux系统安装  sudo apt-get install git
     2.配置用户名：
         git config --global user.name Xulin
         git config --global user.email 517248980@qq.com
-
-
-
-
+14.删除及移动
+    1.git rm 文件名称  -- 删除文件(指令暂存区)
+    2.git mv 文件名称 地址  -- 移动文件(指令暂存区)
+15.标签
+    1.创建 
+        git tag 标签名 -m 字符串
+        git tag 标签名 版本号 -m 字符串  -- 指定版本进行标签添加
+    2.查看标签
+        git tag  -- 查看标签列表
+        git show 标签名  -- 查看标签具体信息
+    3.去往某个标签版本
+        git reset --hard 标签名 
+    4.删除标签
+        git tag -d 标签名 
 
 
 
