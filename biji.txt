@@ -1,11 +1,13 @@
+linux系统安装  sudo apt-get install git
 1.创建文本并保存及删除文件 -- 首先需要到文件夹内运行 git init 进行初始化
     1.vi [文本名称]/touch [文件名称] -- 创建并打开/创建
     2.exc 后 :wq   -- 保存退出
     3.cat [文件名] -- 查看文本内容
     4.rm [文件名称] -- 删除文件
 2.保存并提交到git
-    1.git add 文本名称  -- 添加文本到git
-    2.git commit -m 字符串  -- 添加注释，并将本次修改提交到git
+    1.git add 文本名称 / *  -- 添加文本 / 全部文件到git
+    2.git rm --cached 文件名  -- 取消文件暂存
+    3.git commit -m 字符串  -- 添加注释，并将本次修改提交到git
 3.返回之前的修改版本
     1.git reset --hard HEAD^  -- 返回上个版本
     2.~ HEAD^^...  -- 根据^的个数返回版本
@@ -42,8 +44,13 @@
     git merge 修改过的分支名称
 12.删除不用的分支
     git branch -d 分支名称
-
-
+13.配置用户及邮箱
+    1.配置命令：git config 
+        命令选项 --system 配置作用域系统所有用户
+                --global 配置作用域当前用户所有项目
+    2.配置用户名：
+        git config --global user.name Xulin
+        git config --global user.email 517248980@qq.com
 
 
 
